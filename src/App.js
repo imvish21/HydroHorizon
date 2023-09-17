@@ -1,9 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import React, {useState , useEffect} from 'react';
+import { ThreeDots } from  'react-loader-spinner';
+import HomePage from './Components/HomePage/HomePage';
 import { MutatingDots  } from  'react-loader-spinner'
-import Login from './components/login/login';
-import Sign from './components/sign/sign';
+// import Login from './components/login/login';
+// import Sign from './components/sign/sign';
+
 
 
 function App() {
@@ -13,7 +16,7 @@ function App() {
     setloading(true)
     setTimeout(()=>{
       setloading(false)
-    },6000)
+    },3000)
   },[])
 
   return (
@@ -40,10 +43,14 @@ function App() {
         </div>
         :
         //from here all the webpage part will render
-      <div id='home'>
-       <Login></Login>
-       <Sign></Sign>
-      </div>
+
+        <HomePage />
+
+      // <div id='home'>
+      //  <Login></Login>
+      //  <Sign></Sign>
+      // </div>
+
       }
       
     </div>
